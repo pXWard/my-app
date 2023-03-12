@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
 
+import './index.css';
 
-// const root = ReactDOM.createRoot();
 ReactDOM.render(
-  
-    <div>
-     
-    </div>,
+  // React.createElement('button',{
+  //   onClick: () => console.log("click")}, " "),
+    <App/>,
   document.getElementById('root')
 );
 
