@@ -3,13 +3,13 @@ import React from 'react';
 
 function App() {
 
-  function redirect_BALDA(){
-    <a href="index.html">странице контактов</a>
-  }
+  // function redirect_BALDA(){
+  //   <a href="index.html">efwefp</a>
+  // }
 
   return (
     <div className="App">
-      <button onClick={redirect_BALDA}>BALDA</button>
+      <a href="wordgame.html">efwefp</a>
     </div>  
   );
 } 
