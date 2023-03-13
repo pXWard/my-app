@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import './ttt.css';
 
 class App extends React.Component{
   constructor(props){
@@ -8,8 +8,32 @@ class App extends React.Component{
       squares: Array(9).fill(null),
       count: 0
     }
+    this.winnerLine = [
+      [0,1,2],
+      [3,4,5],
+      [6,7,8],
+      [0,3,6],
+      [1,4,7],
+      [2,5,8],
+      [0,4,8],
+      [2,4,6]
+      ]
+
   }
 
+
+isWinner = () => {
+let s = (this.state.count % 2 === 0) ? 'X' : 'O';
+for (let i = 0; i < 8; i++){
+  let line = this.winnerLine[i];
+  if(this.state.squares[line[0]] === s 
+    && this.state.squares[line[1]] === s
+    && this.state.squares[line[2]] === s){
+      alert(s + ' won!');
+      window.location.reload();
+    }
+}
+}
 
 clickHandler = event => {
 let data = event.target.getAttribute('data');// номер квадрата по которому кликнули
@@ -17,11 +41,12 @@ let currentSquares = this.state.squares;
 console.log(currentSquares);
 
 if(currentSquares[data] == null){
-currentSquares[data] = (this.state.count % 2 == 0) ? 'X' : 'O';
+currentSquares[data] = (this.state.count % 2 === 0) ? 'X' : 'O';
 this.setState({count: this.state.count + 1});
 this.setState({squares: currentSquares});
 }
 else{alert('Клетка уже занята!')}
+this.isWinner();
 }
 
   render() {
