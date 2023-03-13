@@ -1,6 +1,9 @@
 import React from 'react';
 import './ttt.css';
 
+
+
+
 class App extends React.Component{
   constructor(props){
     super(props);
@@ -66,17 +69,6 @@ this.isWinner();
     );
   }
 }
-// function App() {
 
-//   // function redirect_BALDA(){
-//   //   <a href="index.html">efwefp</a>
-//   // }
-
-//   return (
-//     <div className="App">
-//       <a href="wordgame.html">efwefp</a>
-//     </div>  
-//   );
-// } 
  
 export default App;
