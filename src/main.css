@@ -1,23 +1,7 @@
-.hr-horizontal-gradient {
-    margin: 0px 0;
-    height: 100px;
-    border: 10px;
-    border-top: 10px;
-    border-bottom: 10px;
-    background: linear-gradient(45deg, #170c26, #3e3f5c, #170c26);
-}
 
-div {
-    height: 200px;
-    background: linear-gradient(to right, #170c26, #393ca1, #170c26);
-}   
-.ttt {
-    border: 100px solid black; /* Параметры рамки */
-    padding: 5px; /* Поля вокруг текста */
-    margin-bottom: 5px; /* Отступ снизу */
-   }
-   #center { text-align: center; }
-   .content {
-    width: 75%; /* Ширина слоя */
-    background: #fc0; /* Цвет фона */
-   }
+   /*параметры фона*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right,#170c26, #393ca1, #170c26);
+    font-weight: bold;
+    }
